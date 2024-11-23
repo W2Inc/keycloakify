@@ -27,27 +27,5 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/W2Inc/keycloakify:latest
-            ghcr.io/W2Inc/keycloakify:${{ github.sha }}
-
-#   deploy:
-#     runs-on: ubuntu-latest
-#     needs:
-#       - build-and-push-image
-#     steps:
-#     - name: Checkout code
-#       uses: actions/checkout@v4
-
-#     - name: create env file
-#       run: |
-#         echo "GIT_COMMIT_HASH=${{ github.sha }}" >> ./envfile
-
-#     - name: Docker Stack Deploy
-#       uses: cssnr/stack-deploy-action@v1
-#       with:
-#         name: zenfulstats
-#         file: docker-stack.yaml
-#         host: zenful.site
-#         user: deploy
-#         ssh_key: ${{ secrets.DEPLOY_SSH_PRIVATE_KEY }}
-#         env_file: ./envfile
+            ghcr.io/w2inc/keycloakify:latest
+            ghcr.io/w2inc/keycloakify:${{ github.sha }}
